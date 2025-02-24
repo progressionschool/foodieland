@@ -28,45 +28,41 @@ cd assets
 * Explore the boilerplate code provided in the main directories. This might include HTML, CSS, and JavaScript files, among others.
 * Understand the basic structure and setup to ensure that your contributions align with the project's standards.
 
-## Managing Issues
-### Review Open Issues:
-* Visit the 'Issues' section of the repository on GitHub.
-* Carefully read through the descriptions and instructions of open issues to find one that matches your skills and interests.
+# Git Workflow Instructions
 
-### Time Management:
-* Each issue should have an estimated completion time noted. Plan your schedule accordingly to complete issues within the given deadlines.
+1. Issue Management
+   - Review all open issues in the repository
+   - Pick an issue to work on based on priority/issue number
+   - Make note of the issue number as you'll need it for branch naming
 
-## Branching Strategy
+2. Branch Creation
+   - For each issue, create a new feature branch using the format:
+   - `git checkout -b feature/issue-<number>-<short-description>`
+   - Example: For issue #42 about navbar: `git checkout -b feature/issue-42-add-navbar`
 
-For each issue you decide to work on, create a separate branch using the following naming convention:
+3. Development Process
+   - Make your changes in the feature branch
+   - Commit your changes with meaningful commit messages
+   - Push your branch to remote: `git push origin feature/issue-<number>-<description>`
 
-* **Feature Branches:** `feature/issue-<issue-number>-short-description`
+4. Pull Request Process
+   - Create a Pull Request (PR) targeting the main branch
+   - Add appropriate reviewers to the PR
+   - Do not merge the PR yourself - wait for review and approval
 
-Examples:
-```bash
-# For a feature related to adding navbar functionality
-git checkout -b feature/issue-42-add-navbar
-```
+5. Working on Subsequent Issues
+   - Before starting a new issue, pull the latest changes from the previous issue's branch
+   - Create a new branch for the next issue following the same naming convention
+   - Example: `git checkout -b feature/issue-43-add-footer`
+   - This ensures you have all the code from previous changes
 
-## Contribution Process
+6. Communication
+   - For any questions or clarifications, contact the team via:
+     - Slack
+     - WhatsApp
 
-1. **Branch Out:**
-   * Always create a new branch for your work, following the naming convention provided above.
-   * Ensure you're working on the correct branch with `git status`.
-
-2. **Make Changes:**
-   * Implement the necessary changes or improvements as described in the issue.
-   * Frequently commit your changes with clear, concise commit messages.
-
-3. **Push Changes:**
-   ```bash
-   git push -u origin [your-branch-name]
-   ```
-   * Replace `[your-branch-name]` with the name of your branch.
-
-4. **Open a Pull Request:**
-   * Once you have completed the changes, open a pull request from your branch to the main branch.
-   * Ensure you provide a clear description of the changes and reference the issue number.
-
-5. **Code Review:**
-   * Wait for the code review and respond to any feedback.
+7. Important Notes
+   - Always create a new branch for each issue
+   - Never work directly on the main branch
+   - Keep PRs focused on single issues for easier review
+   - Ensure your branch is up to date before creating a PR
